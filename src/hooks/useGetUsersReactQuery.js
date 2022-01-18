@@ -10,5 +10,5 @@ const fetchUsers = () =>
     },
   });
 
-export const useUserQuery = () =>
+export const useGetUsersReactQuery = () =>
   useQuery("users", () => fetchUsers().then((response) => response.json()));

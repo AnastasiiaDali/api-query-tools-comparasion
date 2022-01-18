@@ -17,6 +17,9 @@ export default function Buttons() {
       <Button variant="contained" component={Link} to={"/rtk"}>
         Redux RTK
       </Button>
+      <Button variant="contained" component={Link} to={"/thunk"}>
+        Redux Thunk
+      </Button>
     </>
   );
 }

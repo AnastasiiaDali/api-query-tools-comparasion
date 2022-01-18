@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
+import { useState, useEffect } from "react";
 
 const accessToken = "uGkb1csX1uKsS84iz4lsBSniluiVWKgwgrqgZpU4m1I";
 const spaceId = "3z09v4hcrkbr";
@@ -16,7 +14,7 @@ const query = `
   }
 `;
 
-export default function UsersGraphQL() {
+export default function useGetUsersGraphQL() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -44,16 +42,5 @@ export default function UsersGraphQL() {
       });
   }, []);
 
-  return (
-    <>
-      {users?.map((user) => (
-        <Box key={user.id}>
-          <Button>
-            {user.name}
-            {user.email}
-          </Button>
-        </Box>
-      ))}
-    </>
-  );
+  return { users };
 }
