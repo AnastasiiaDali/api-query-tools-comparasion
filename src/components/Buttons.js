@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 export default function Buttons() {
   return (
     <>
-      <Button component={Link} to={"/rtk"}>
-        RTK
+      <Button variant="contained" component={Link} to={"/graphql-apollo"}>
+        GraphQL Apollo
       </Button>
-      <Button component={Link} to={"/react-query"}>
+      <Button variant="contained" component={Link} to={"/react-query"}>
         React Query
       </Button>
-      <Button component={Link} to={"/graphgl"}>
+      <Button variant="contained" component={Link} to={"/graphgl"}>
         GrapgQL
+      </Button>
+      <Button variant="contained" component={Link} to={"/rtk"}>
+        Redux RTK
       </Button>
     </>
   );

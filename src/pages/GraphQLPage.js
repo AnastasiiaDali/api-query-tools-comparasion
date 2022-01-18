@@ -1,14 +1,14 @@
 import React from "react";
 import Buttons from "../components/Buttons";
 import InputToDo from "../components/InputToDo";
-import UsersReactQuery from "../components/UsersReactQuery";
+import UsersGraphQL from "../components/UsersGraphQL";
 
-export default function ReactQueryPage() {
+export default function GraphQLPage() {
   return (
     <>
-      <h1>This is React Query page</h1>
+      <h1>This is GraphGL page</h1>
       <Buttons />
-      <UsersReactQuery />
+      <UsersGraphQL />
       <InputToDo />
     </>
   );
