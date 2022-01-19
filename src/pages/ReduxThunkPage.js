@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 import Box from "@mui/material/Box";
 import { useGetUsersReduxThunk } from "../hooks/useGetUsersReduxThunk";
 
@@ -8,14 +9,20 @@ export default function ReduxThunkPage() {
 
   if (loading || error) <></>;
   return (
-    <>
-      <h1>This is Redux RTK page</h1>
+    <Box sx={{ margin: "30px 0 30px" }}>
+      <Typography variant="h5" align="center" paragraph>
+        This is Redux RTK page
+      </Typography>
       {users?.map((user, id) => (
-        <Box key={id}>
-          <Button>{user.fields.name}</Button>
-          <Button>{user.fields.email}</Button>
+        <Box
+          key={user.fields.id}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <Typography>
+            {user.fields.name}: {user.fields.email}
+          </Typography>
         </Box>
       ))}
-    </>
+    </Box>
   );
 }

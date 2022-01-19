@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useGetUsersGraphQL from "../hooks/useGetUsersGraphQL";
 
@@ -7,16 +7,17 @@ export default function GraphQLPage() {
   const { users } = useGetUsersGraphQL();
 
   return (
-    <>
-      <h1>This is GraphGL page</h1>
+    <Box sx={{ margin: "30px 0 30px" }}>
+      <Typography variant="h5" align="center" paragraph>
+        This is GraphGL page
+      </Typography>
       {users?.map((user) => (
-        <Box key={user.id}>
-          <Button>
-            {user.name}
-            {user.email}
-          </Button>
+        <Box key={user.id} sx={{ display: "flex", justifyContent: "center" }}>
+          <Typography>
+            {user.name}: {user.email}
+          </Typography>
         </Box>
       ))}
-    </>
+    </Box>
   );
 }
