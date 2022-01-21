@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
-import { useGetUsersReactQuery } from "../hooks/useGetUsersReactQuery";
+import { useGetUsersReactQuery } from "hooks/useGetUsersReactQuery";
 import { CopyBlock, nord } from "react-code-blocks";
-import { reactQuery } from "../components/codeBlocks";
+import { reactQuery } from "components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
 export default function ReactQueryPage() {
   const { data } = useGetUsersReactQuery();

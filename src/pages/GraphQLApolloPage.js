@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
 import { CopyBlock, nord } from "react-code-blocks";
-import { graphqlApollo } from "../components/codeBlocks";
+import { graphqlApollo } from "components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-
-import useGetUsersApollo from "../hooks/useGetUsersApollo";
+import useGetUsersApollo from "hooks/useGetUsersApollo";
 
 export default function GraphQLApolloPage() {
   const { data } = useGetUsersApollo();

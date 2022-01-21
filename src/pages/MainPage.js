@@ -43,11 +43,13 @@ export default function MainPage() {
       minHeight="calc(100vh - 56px)"
       display="flex"
       flexDirection="column"
+      maxWidth="1010px"
+      mx="auto"
     >
       <Heading align="center" mb={4}>
-        React Magic
+        Fetch Magic
       </Heading>
-      <Text align="center" maxWidth="800px" mx="auto" mb={5}>
+      <Text align="center" mb={5}>
         Fetch Magic was builded for learning purpose, in this application I
         practice different fetching tools to have dipper understanding of the
         topic. All solutions were implemented with Custom Hooks. For more
@@ -57,7 +59,7 @@ export default function MainPage() {
       <Box
         display="flex"
         flexWrap="wrap"
-        m="auto"
+        mx="auto"
         justifyContent="center"
         gridGap="32px"
         mb={10}

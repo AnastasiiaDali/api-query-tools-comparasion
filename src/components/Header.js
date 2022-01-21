@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import RocketIcon from "../assets/rocket-icon-vector.png";
+import RocketIcon from "assets/rocket-icon-vector.png";
 
 const pages = [
   { id: "1", name: "GraphQL Apollo", path: "/graphql-apollo" },
@@ -40,9 +40,10 @@ const Header = () => {
         top="10px"
         as={Link}
         to="/"
-        left={{ base: "50%", md: "16px" }}
+        left={{ base: "50%", md: "28px" }}
         transform={{ base: "translateX(-50%)", md: "translateX(0)" }}
         fontSize="2xl"
+        fontWeight="600"
       >
         Fetch Magic
       </Text>
@@ -91,7 +92,9 @@ const Header = () => {
       <Avatar
         position="absolute"
         top="4px"
-        right="12px"
+        as={Link}
+        to="/"
+        right={{ base: "12px", md: "28px" }}
         size="md"
         name="Kola Tioluwani"
         src={RocketIcon}

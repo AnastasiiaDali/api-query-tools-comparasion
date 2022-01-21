@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
 import { CopyBlock, nord } from "react-code-blocks";
-import { rtk } from "../components/codeBlocks";
+import { rtk } from "components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-import { useGetUsersQuery } from "../hooks/useGetUsersRTK";
+import { useGetUsersQuery } from "hooks/useGetUsersRTK";
 
 export default function RTKPage() {
   const { data } = useGetUsersQuery();

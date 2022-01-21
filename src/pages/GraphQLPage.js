@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
 import { CopyBlock, nord } from "react-code-blocks";
-import { graphql } from "../components/codeBlocks";
+import { graphql } from "components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-import useGetUsersGraphQL from "../hooks/useGetUsersGraphQL";
+import useGetUsersGraphQL from "hooks/useGetUsersGraphQL";
 
 export default function GraphQLPage() {
   const { users } = useGetUsersGraphQL();

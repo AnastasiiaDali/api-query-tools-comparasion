@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { usersLoading, usersReceived, usersError } from "../store/usersSlice";
+import { usersLoading, usersReceived, usersError } from "store/usersSlice";
 
 const accessToken = "uGkb1csX1uKsS84iz4lsBSniluiVWKgwgrqgZpU4m1I";
 const spaceId = "3z09v4hcrkbr";

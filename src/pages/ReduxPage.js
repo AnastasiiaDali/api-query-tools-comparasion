@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
 import { CopyBlock, nord } from "react-code-blocks";
-import { redux } from "../components/codeBlocks";
+import { redux } from "components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-import { useGetUsersRedux } from "../hooks/useGetUsersRedux";
+import { useGetUsersRedux } from "hooks/useGetUsersRedux";
 
 export default function ReduxPage() {
   const { users, loading, error } = useGetUsersRedux();
