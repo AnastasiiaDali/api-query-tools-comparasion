@@ -19,5 +19,3 @@
 - [Contentful API](https://www.contentful.com/)
 
 <p align="center">To launch this project, go to https://fetchmagic.netlify.app/</p>
-
-<div align="center">Website at [Fetch Magic](https://fetchmagic.netlify.app/)</div>
