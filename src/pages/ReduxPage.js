@@ -5,7 +5,7 @@ import { redux } from "../components/codeBlocks";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
 import { useGetUsersRedux } from "../hooks/useGetUsersRedux";
 
-export default function ReduxThunkPage() {
+export default function ReduxPage() {
   const { users, loading, error } = useGetUsersRedux();
 
   if (loading || error) <></>;

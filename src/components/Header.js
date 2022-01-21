@@ -38,6 +38,8 @@ const Header = () => {
       <Text
         position="absolute"
         top="10px"
+        as={Link}
+        to="/"
         left={{ base: "50%", md: "16px" }}
         transform={{ base: "translateX(-50%)", md: "translateX(0)" }}
         fontSize="2xl"
