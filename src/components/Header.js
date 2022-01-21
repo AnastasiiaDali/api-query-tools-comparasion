@@ -15,7 +15,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import RocketIcon from "assets/rocket-icon-vector.png";
 
 const pages = [
-  { id: "1", name: "GraphQL Apollo", path: "/graphql-apollo" },
+  { id: "1", name: "Apollo", path: "/graphql-apollo" },
   { id: "2", name: "React Query", path: "/react-query" },
   { id: "3", name: "GrapgQL", path: "/graphgl" },
   { id: "4", name: "Redux RTK", path: "/rtk" },
