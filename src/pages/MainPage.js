@@ -50,8 +50,8 @@ export default function MainPage() {
         Fetch Magic
       </Heading>
       <Text align="center" mb={5}>
-        Fetch Magic was builded for learning purpose, in this application I
-        practice different fetching tools to have dipper understanding of the
+        Fetch Magic was built for learning purpose. In this application I
+        practice different fetching tools to have deaper understanding of the
         topic. All solutions were implemented with Custom Hooks. For more
         details please go to the technology you are interested in. Cheers
         &#128540;
