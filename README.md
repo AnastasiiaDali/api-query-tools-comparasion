@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./public/rocket.png"></img>
+<img width="60px" src="./public/rocket.png"></img>
 </div>
 
 <h1 align="center">Fetch Magic</h1>
