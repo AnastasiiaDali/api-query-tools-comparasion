@@ -1,28 +1,55 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
-
-import Box from "@mui/material/Box";
-import { useGetUsersReduxThunk } from "../hooks/useGetUsersReduxThunk";
+import { Box, Text, Heading } from "@chakra-ui/react";
+import { CopyBlock, nord } from "react-code-blocks";
+import { redux } from "../components/codeBlocks";
+import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
+import { useGetUsersRedux } from "../hooks/useGetUsersRedux";
 
 export default function ReduxThunkPage() {
-  const { users, loading, error } = useGetUsersReduxThunk();
+  const { users, loading, error } = useGetUsersRedux();
 
   if (loading || error) <></>;
   return (
-    <Box sx={{ margin: "30px 0 30px" }}>
-      <Typography variant="h5" align="center" paragraph>
-        This is Redux RTK page
-      </Typography>
-      {users?.map((user, id) => (
-        <Box
-          key={user.fields.id}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          <Typography>
-            {user.fields.name}: {user.fields.email}
-          </Typography>
-        </Box>
-      ))}
+    <Box my="80px" px="16px" maxWidth="800px" mx="auto">
+      <Box>
+        <Heading align="center" mb={5}>
+          This is Redux page
+        </Heading>
+        <Text align="center" mb={8}>
+          Thunk middleware for Redux. It allows writing functions with logic
+          inside that can interact with a Redux store's dispatch and getState
+          methods.
+        </Text>
+        <CopyBlock
+          language={"jsx"}
+          text={redux}
+          showLineNumbers={true}
+          theme={nord}
+          wrapLines={true}
+          codeBlock
+        />
+      </Box>
+      <Text my={5} align="center">
+        This Data is Fetched by using Redux
+      </Text>
+      <Box style={{ height: "300px", overflow: "scroll" }}>
+        <Table colorScheme="blackAlpha" variant="striped">
+          <Thead>
+            <Tr>
+              <Th>Friend Name</Th>
+              <Th>Email Me</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {users?.map((user, id) => (
+              <Tr key={id}>
+                <Td>{user.fields.name}</Td>
+                <Td>{user.fields.email}</Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Box>
     </Box>
   );
 }

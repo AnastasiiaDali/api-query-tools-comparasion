@@ -5,7 +5,7 @@ import { usersLoading, usersReceived, usersError } from "../store/usersSlice";
 const accessToken = "uGkb1csX1uKsS84iz4lsBSniluiVWKgwgrqgZpU4m1I";
 const spaceId = "3z09v4hcrkbr";
 
-export function useGetUsersReduxThunk() {
+export function useGetUsersRedux() {
   const users = useSelector((state) => state.users.users);
   const loading = useSelector((state) => state.users.loading);
   const error = useSelector((state) => state.users.error);

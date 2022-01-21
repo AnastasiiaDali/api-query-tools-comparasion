@@ -1,24 +1,27 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import GraphQLApolloPage from "./pages/GraphQLApolloPage.js";
-import ReactQueryPage from "./pages/ReactQueryPage.js";
-import GraphQLPage from "./pages/GraphQLPage.js";
-import RTKPage from "./pages/RTKPage.js";
-import ReduxThunkPage from "./pages/ReduxThunkPage.js";
-import Buttons from "./components/Buttons.js";
+import GraphQLApolloPage from "./pages/GraphQLApolloPage";
+import ReactQueryPage from "./pages/ReactQueryPage";
+import GraphQLPage from "./pages/GraphQLPage";
+import RTKPage from "./pages/RTKPage";
+import ReduxThunkPage from "./pages/ReduxThunkPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Buttons />
+      <Header />
 
       <Routes>
         <Route path="/graphql-apollo" element={<GraphQLApolloPage />} />
         <Route path="/react-query" element={<ReactQueryPage />} />
         <Route path="/graphgl" element={<GraphQLPage />} />
-        <Route path="/thunk" element={<ReduxThunkPage />} />
+        <Route path="/redux" element={<ReduxThunkPage />} />
         <Route path="/rtk" element={<RTKPage />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

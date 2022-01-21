@@ -13,6 +13,7 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { ChakraProvider } from "@chakra-ui/react";
 
 // Apollo GraphQL
 const accessToken = "uGkb1csX1uKsS84iz4lsBSniluiVWKgwgrqgZpU4m1I";
@@ -54,9 +55,9 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <ApolloProvider client={client}>
-          <React.StrictMode>
+          <ChakraProvider>
             <App />
-          </React.StrictMode>
+          </ChakraProvider>
         </ApolloProvider>
       </BrowserRouter>
     </Provider>

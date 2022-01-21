@@ -13,9 +13,6 @@ const FETCH_USERS = gql`
 `;
 
 export default function useGetUsersApollo() {
-  const { data } = useQuery(FETCH_USERS, {
-    // onCompleted: (data) => {},
-  });
-
+  const { data } = useQuery(FETCH_USERS);
   return { data };
 }
