@@ -29,7 +29,5 @@ export function useGetUsersRedux() {
       .finally(() => dispatch(usersLoading(false)));
   }, [dispatch]);
 
-  if (loading || error) <></>;
-
   return { users, loading, error };
 }
